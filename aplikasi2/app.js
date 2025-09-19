@@ -18,6 +18,6 @@ app.get('/json', (req, res) => {
 app.use(express.static('public'));
 
 app.listen(port, (req, res) => {
-    console.log('Server Running at http://localhost:3000/index.html)
+    console.log('Server Running at http://localhost:3000/index.html')
         });
 
