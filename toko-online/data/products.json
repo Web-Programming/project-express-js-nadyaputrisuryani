@@ -1,0 +1,75 @@
+[
+  {
+    "id": 1,
+    "name": "Laptop Gaming",
+    "price": 15000000,
+    "description": "Laptop performa tinggi cocok untuk gaming"
+  },
+  {
+    "id": 2,
+    "name": "Smartphone Pro",
+    "price": 8500000,
+    "description": "Smartphone dengan kamera berkualitas tinggi dan performa cepat"
+  },
+  {
+    "id": 3,
+    "name": "Headphone Wireless",
+    "price": 1200000,
+    "description": "Headphone nirkabel dengan kualitas suara jernih"
+  },
+  {
+    "id": 4,
+    "name": "Smartwatch",
+    "price": 2500000,
+    "description": "Jam tangan pintar dengan fitur kesehatan lengkap"
+  },
+  {
+    "id": 5,
+    "name": "Tablet Android",
+    "price": 4500000,
+    "description": "Tablet multifungsi untuk belajar dan hiburan"
+  },
+  {
+    "id": 6,
+    "name": "Kamera DSLR",
+    "price": 12500000,
+    "description": "Kamera profesional dengan lensa berkualitas tinggi"
+  },
+  {
+    "id": 7,
+    "name": "Monitor 4K",
+    "price": 6000000,
+    "description": "Monitor resolusi 4K dengan warna akurat"
+  },
+  {
+    "id": 8,
+    "name": "Keyboard Mechanical",
+    "price": 900000,
+    "description": "Keyboard mekanis dengan switch tactile dan lampu RGB"
+  },
+  {
+    "id": 9,
+    "name": "Mouse Gaming",
+    "price": 650000,
+    "description": "Mouse ergonomis dengan DPI tinggi cocok untuk gaming"
+  },
+  {
+    "id": 10,
+    "name": "Speaker Bluetooth",
+    "price": 1100000,
+    "description": "Speaker portabel dengan suara bass kuat"
+  },
+  {
+    "id": 11,
+    "name": "Printer Inkjet",
+    "price": 2800000,
+    "description": "Printer dengan hasil cetak tajam dan cepat"
+  },
+  {
+    "id": 12,
+    "name": "External Harddisk 1TB",
+    "price": 1200000,
+    "description": "Penyimpanan eksternal dengan kapasitas besar"
+  }
+]
+  
