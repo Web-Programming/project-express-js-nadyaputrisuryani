@@ -13,6 +13,7 @@ app.get('/json', (req, res) => {
     res.json({ message: 'Ini adalah response JSON' });
 });
 
+
 //Serving static file
 
 app.use(express.static('public'));
@@ -20,4 +21,5 @@ app.use(express.static('public'));
 app.listen(port, (req, res) => {
     console.log('Server Running at http://localhost:3000/index.html')
         });
+
 
