@@ -1,10 +1,11 @@
 var express = require('express');
 var router = express.Router();
-var produk = require('../data/produk.json');
+var produk = require('../data/products.json');
 
 // new
 var fs = require('fs');
 var path = require('path');
+const { title } = require('process');
 
 /* GET home page. */
 // router.get('/', function(req, res, next) {
@@ -25,7 +26,7 @@ try {
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Toko Online Keren',
     products:produk });
-});
+
+  });
 
 module.exports = router;
-
