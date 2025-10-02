@@ -3,9 +3,9 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var productRouter = require("./routes/product");
+var productRouter = require("./app_toko_online/ routes/product");
 var indexRouter = require('./app_toko-online/routes/index');
-var usersRouter = require('./app_toko-online/ routes/users');
+var usersRouter = require('../app_toko-online/ routes/users');
 var engine = require('ejs-blocks'); //menggunakan ejs blok
 var app = express();
 

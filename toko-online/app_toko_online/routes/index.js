@@ -31,4 +31,4 @@ router.get('/', function(req, res, next) {
 router.get("/",mainController.index);
 module.exports = router;
 
-mob
+
