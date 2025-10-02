@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var mainController = require('../controllers/main');
+var products = require ('../../data/products.json');
 
 /* GET home page. */
 // router.get('/', function (req, res, next) {
