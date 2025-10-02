@@ -1,34 +1,36 @@
 var express = require('express');
 var router = express.Router();
-var produk = require('../data/products.json');
-
-// new
-var fs = require('fs');
-var path = require('path');
-const { title } = require('process');
+var mainController = require('../controllers/main');
 
 /* GET home page. */
-// router.get('/', function(req, res, next) {
-//   res.render('index', { title: 'Toko Online Keren', produk: produk});
+// router.get('/', function (req, res, next) {
+//   res.render('index', {
+//      title: 'Toko Online Sederhana', 
+//      products: products,
+//       query: null //biar bisa dipakai di view
+//     });
 // });
 
-// baca data json
-const dataPath = path.join(__dirname, '../data/produk.json');
-let products = [];
+/* GET search page. */
+router.get('/search', function (req, res, next) {
+  const q = req.query.q ? req.query.q.toLowerCase() : "";
 
-try {
-  const rawData = fs.readFileSync(dataPath);
-  products = JSON.parse(rawData);
-} catch (err) {
-  console.error("Gagal baca produk.json:", err);
-}
+  let filteredProducts;
+  if (!q) {
+    filteredProducts = products; // jika query kosong tampilkan semua
+  } else {
+    filteredProducts = products.filter(p =>
+      p.name.toLowerCase().includes(q)
+    );
+  }
 
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Toko Online Sederhana',
-    products:produk });
-
+  res.render('index', {
+    title: 'Hasil Pencarian',
+    products: filteredProducts,
+    query: q
   });
-router.get("/",mainController.index);
+});
+
+router.get("/", mainController.index);
+
 module.exports = router;
-
-
