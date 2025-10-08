@@ -4,7 +4,7 @@ const dbURI = "mongodb://localhost:27017/nadyapaw2-si5c";
 mongoose.connect(dbURI, {});
 
 mongoose.connection.on("connected", () => {
-  console.log("Mongoose connected to ${dbURI}");
+  console.log(`Mongoose connected to ${dbURI}`);
 });
 
 mongoose.connection.on("error", (err) => {
