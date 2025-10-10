@@ -1,7 +1,23 @@
 const express = require('express');
 const router = express.Router();
 const products = require('../../data/products.json');
+var products = require("../models/products");
+router.get("/:id", function(req, res,next){
 
+    });
+
+    router.get("/all", async function(req, res,next){
+        try{
+            const prod= await products.find({}); //utk mengambil seluruh data
+            res.render('index',{
+            title:' Toko Online Sederhana',
+            products: prod
+            });
+        }catch (err){
+            res.status(500).send("gagal memuat produk");
+        }
+        
+    });
 
 router.get("/:id", function(req, res, next){
     const productId = parseInt(req.params.id); // tangkap ID dari URL
@@ -18,7 +34,7 @@ router.get("/:id", function(req, res, next){
         }
     );
 });
-
+    
 // tambahan soal 3
 router.get("/:productId/review/:reviewId", function(req, res, next){
     const productId = parseInt(req.params.productId);
