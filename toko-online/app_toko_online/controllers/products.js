@@ -68,12 +68,12 @@ const create = async (req, res) => {
 
 //read one /detail product
 const detailproduk = async(req, res) => {
-
+  
 };
+
 
 //update data
 const update = async(req, res) => {
-
 };
 
 //delete/remove/destroy data
@@ -90,4 +90,4 @@ module.exports = {
   remove
 };
 
-module.exports = { index, detail };
+

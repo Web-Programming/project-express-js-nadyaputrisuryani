@@ -8,6 +8,9 @@ var indexRouter = require('./app_toko_online/routes/index');
 var usersRouter = require('./app_toko_online/routes/users');
 var engine = require('ejs-blocks'); //menggunakan ejs blok
 var app = express();
+require(".app_toko_online/models/db"); // panggil db
+app.use('/bootstrap', express.static(path.join(__dirname, 'node_modules/bootstrap/dist')));
+
 
 // view engine setup
 app.set('views', path.join(__dirname,'app_toko_online', 'views'));
@@ -24,6 +27,7 @@ app.use('/bootstrap', express.static(path.join(__dirname, 'node_modules/bootstra
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use("/produk", productRouter);
+app.use("/api/product", apiProductRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -40,5 +44,8 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+//CRUD CONTROLLER
+
 
 module.exports = app;
