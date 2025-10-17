@@ -43,6 +43,18 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
+
+  const express = require('express');
+  const app = express();
+  const userRoutes = require('./routes/api/user');
+
+  app.use(express.json()); // Untuk parsing JSON body
+  app.use('/api/users', userRoutes);
+
+  app.listen(3000, () => {
+  console.log('Server berjalan di port 3000');
+});
+
 });
 
 //CRUD CONTROLLER
