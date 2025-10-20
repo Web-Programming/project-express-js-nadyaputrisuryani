@@ -8,8 +8,11 @@ var indexRouter = require('./app_toko_online/routes/index');
 var usersRouter = require('./app_toko_online/routes/users');
 var engine = require('ejs-blocks'); //menggunakan ejs blok
 var app = express();
-require(".app_toko_online/models/db"); // panggil db
+require("./app_toko_online/models/db"); // panggil db
 app.use('/bootstrap', express.static(path.join(__dirname, 'node_modules/bootstrap/dist')));
+const apiProductRouter = require('./app_toko_online/routes/apiProduct');
+var apiUsertRouter = require("./app_toko_online/routers/api/user");
+var apiOrderRouter = require("./app_toko_online/routers/api/order");
 
 
 // view engine setup
