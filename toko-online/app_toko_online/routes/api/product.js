@@ -166,6 +166,7 @@ const remove = async(req,res) =>{
             });
          }
     }
+    
 };
 
 module.exports = {index, detail, apiall, create, detailproduk, update,remove};
