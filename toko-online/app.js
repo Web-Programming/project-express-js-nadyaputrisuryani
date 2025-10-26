@@ -11,7 +11,7 @@ var app = express();
 require("./app_toko_online/models/db"); // panggil db
 app.use('/bootstrap', express.static(path.join(__dirname, 'node_modules/bootstrap/dist')));
 const apiProductRouter = require('./app_toko_online/routes/apiProduct');
-var apiUsertRouter = require("./app_toko_online/routers/api/user");
+var apiUserRouter = require("./app_toko_online/routers/api/user");
 var apiOrderRouter = require("./app_toko_online/routers/api/order");
 
 
